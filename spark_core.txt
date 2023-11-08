@@ -1,4 +1,5 @@
 # Execute below comment only in pyspark shell 
+
 >>> from pyspark.sql.types import *
 >>> from pyspark.sql import SparkSession
 >>> from pyspark.sql.types import StructType,StructField, StringType, IntegerType
@@ -8,3 +9,28 @@
 ...         ("Tony","","Stark",4,"F"),
 ...         ("Rajiv","Mary","Kumar",5,"F")
 ...     ]
+
+# defining the schema 
+
+schema = StructType([ \
+...         StructField("firstname",StringType(),True), \
+...         StructField("middlename",StringType(),True), \
+...         StructField("middlename",StringType(),True), \
+...         StructField("id", IntegerType(), True), \
+...         StructField("gender", StringType(), True), \
+...     ])
+
+#creating spark dataframe
+
+df = spark.createDataFrame(data=person_list,schema=schema)
+#Printing data frame schema
+#Printing data
+df.show(truncate=False)
+df.pySpark()
+
+>>> df.printSchema()   -- print the schema 
+
+
+
+
+
