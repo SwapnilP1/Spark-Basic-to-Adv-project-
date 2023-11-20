@@ -31,6 +31,13 @@ df.pySpark()
 >>> df.printSchema()   -- print the schema 
 
 
+ # Local file  data put in hdf 
+
+
+
+
+
+
 
 
 
