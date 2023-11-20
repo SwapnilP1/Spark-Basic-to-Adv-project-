@@ -33,6 +33,41 @@ df.pySpark()
 
  # Local file  data put in hdf 
 
+ read data from hdfs if data is stored in any other folder 
+>>> df1 = spark.read.option("header",True).csv("hdfs://namenode:8888/input_data/departments.csv")
+
+
+# Read data from hdfs path 
+
+we can see the data heading from these context 
+#  df1 = spark.read.option("header",True).csv("/input_data/departments.csv")
+>>> df1.show()
+
+df1.printSchema()
+root
+ |-- DEPARTMENT_ID: string (nullable = true)
+ |-- DEPARTMENT_NAME: string (nullable = true)
+ |-- MANAGER_ID: string (nullable = true)
+ |-- LOCATION_ID: string (nullable = true)
+
+
+change string to interger value from interSchema command 
+
+>>> df2 = spark.read.option("header",True).option("inferSchema",True).csv("/input_data/departments.csv")
+>>> df2.printSchema()
+root
+ |-- DEPARTMENT_ID: integer (nullable = true)
+ |-- DEPARTMENT_NAME: string (nullable = true)
+ |-- MANAGER_ID: string (nullable = true)
+ |-- LOCATION_ID: integer (nullable = true)
+
+
+
+
+
+
+
+
 
 
 
