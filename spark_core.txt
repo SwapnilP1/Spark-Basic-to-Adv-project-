@@ -69,6 +69,68 @@ another method for changing the inferschema foer any partycular column
 
 
 
+-- # How to read the data and specifically mention any select statement
+
+>>> emp_df = df1.select("EMPLOYEE_ID","FIRST_NAME").show()
+--------------------------------------------------------
+# First way of applying the select column 
+>>> df1.select("EMPLOYEE_ID","FIRST_NAME").show()
+--------------------------------------------------------
+second way of selecting the data 
+>>> df1.select(df1.EMPLOYEE_ID,df1.FIRST_NAME).show()
+--------------------------------------------------------
+third way to selecting any data 
+>>> df1.select(df1["EMPLOYEE_ID"],df1["FIRST_NAME"].show()
+---------------------------------------------------------
+
+function is there for selecting sql query in pyspark 
+
+>>> from pyspark.sql.functions import col
+
+
+>>> df1.select(col("EMPLOYEE_ID"),col("FIRST_NAME")).show()
+
+alisa method is aplicable with coloumn object 
+
+>>> df1.select(col("EMPLOYEE_ID").alias("EMP_ID"),col("FIRST_NAME")).show()
+
+
+>>> df1.select(col("EMPLOYEE_ID").alias("EMP_ID"),col("FIRST_NAME")).show()
++------+----------+
+|EMP_ID|FIRST_NAME|
++------+----------+
+|   198|    Donald|
+|   199|   Douglas|
+|   200|  Jennifer|
+|   201|   Michael|
+|   202|       Pat|
+|   203|     Susan|
+|   204|   Hermann|
+|   205|   Shelley|
+|   206|   William|
+|   100|    Steven|
+|   101|     Neena|
+|   102|       Lex|
+|   103| Alexander|
+|   104|     Bruce|
+|   105|     David|
+|   106|     Valli|
+|   107|     Diana|
+|   108|     Nancy|
+|   109|    Daniel|
+|   110|      John|
++------+----------+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
