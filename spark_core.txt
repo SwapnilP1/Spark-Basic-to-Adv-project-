@@ -62,13 +62,9 @@ root
  |-- LOCATION_ID: integer (nullable = true)
 
 
+another method for changing the inferschema foer any partycular column 
 
-
-
-
-
-
-
+>>> df1 = spark.read.csv("/input_data/employees.csv",header = True, inferSchema = True)
 
 
 
