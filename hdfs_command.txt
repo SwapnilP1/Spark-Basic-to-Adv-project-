@@ -1,0 +1,5 @@
+abc@5ff8904ef5b8:~/workspace$ -   ls
+abc@5ff8904ef5b8:~/workspace$ -   hadoop fs -ls /
+abc@5ff8904ef5b8:~/workspace$ -   hadoop fs -mkdir /input_data
+abc@5ff8904ef5b8:~/workspace$ -   hadoop fs -ls /
+abc@5ff8904ef5b8:~/workspace$ -   hadoop fs  -put departments.csv /input_data
