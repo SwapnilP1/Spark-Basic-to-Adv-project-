@@ -212,9 +212,30 @@ only showing the top 20 rows
 +-----------+------+
 only showing the top 20 rows
 
-#  filter condition and where conddtion 
+#  filter condition and where the condition 
 
->>> emp.filter((col("DEPARTMENT_ID") == 50) & (col("SALARY") < 5000 )).select ("FIRST_NAME","SALARY","DEPARTMENT_ID").show()
+>>> emp.filter((col("DEPARTMENT_ID") == 50) & (col("SALARY") < 5000 )
+).select ("FIRST_NAME","SALARY","DEPARTMENT_ID").show()
+
+
+
+
+Reading a data what kind of cleaning you apply ? 
+basic things 
+
+1 removing nulls value 
+2 remove repeat data 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
