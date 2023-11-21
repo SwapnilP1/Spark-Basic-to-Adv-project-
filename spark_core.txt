@@ -121,8 +121,11 @@ alisa method is aplicable with coloumn object
 |   110|      John|
 +------+----------+
 
+creating a new column in pyspark and adding one more column 
 
 
+-  add a column with increase salary to 1000 
+>>> emp.select("EMPLOYEE_ID","FIRST_NAME","SALARY").withColumn("NEW_SALARY",col("SALARY") + 1000 ).show()
 
 
 
