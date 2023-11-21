@@ -128,6 +128,37 @@ creating a new column in pyspark and adding one more column
 >>> emp.select("EMPLOYEE_ID","FIRST_NAME","SALARY").withColumn("NEW_SALARY",col("SALARY") + 1000 ).show()
 
 
+ANOTHER way to select the coloumn in spark 
+
+>>> emp.withColumn("NEW_SALARY",col("SALARY") + 1000 ).select("EMPLOYEE_ID","FIRST_NAME","NEW_SALARY").show()
++-----------+----------+----------+
+|EMPLOYEE_ID|FIRST_NAME|NEW_SALARY|
++-----------+----------+----------+
+|        198|    Donald|      3600|
+|        199|   Douglas|      3600|
+|        200|  Jennifer|      5400|
+|        201|   Michael|     14000|
+|        202|       Pat|      7000|
+|        203|     Susan|      7500|
+|        204|   Hermann|     11000|
+|        205|   Shelley|     13008|
+|        206|   William|      9300|
+|        100|    Steven|     25000|
+|        101|     Neena|     18000|
+|        102|       Lex|     18000|
+|        103| Alexander|     10000|
+|        104|     Bruce|      7000|
+|        105|     David|      5800|
+|        106|     Valli|      5800|
+|        107|     Diana|      5200|
+|        108|     Nancy|     13008|
+|        109|    Daniel|     10000|
+|        110|      John|      9200|
++-----------+----------+----------+
+only showing top 20 rows
+
+
+
 
 
 
