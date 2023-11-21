@@ -176,11 +176,41 @@ only showing top 20 rows
 
 only showing the top 20 rows
 # How to rename a column in pyspark
-
 -  emp.withColumnRenamed("SALARY","EMP_SALARY").show()
 # drop a particular column into the database 
+>>> emp.drop("COMMISSION_PCT").show()
+# filteraion in py spark 
 
 
+ salary showing >  5000 
+>>> emp1 = emp.filter(col("SALARY") > 5000)
+>>> emp1 = emp.filter(col("SALARY") > 5000).select("FIRST_NAME","SALARY")
+>>> emp1.show()
++-----------+------+
+| FIRST_NAME|SALARY|
++-----------+------+
+|    Michael| 13000|
+|        Pat|  6000|
+|      Susan|  6500|
+|    Hermann| 10000|
+|    Shelley| 12008|
+|    William|  8300|
+|     Steven| 24000|
+|      Neena| 17000|
+|        Lex| 17000|
+|  Alexander|  9000|
+|      Bruce|  6000|
+|      Nancy| 12008|
+|     Daniel|  9000|
+|       John|  8200|
+|     Ismael|  7700|
+|Jose Manuel|  7800|
+|       Luis|  6900|
+|        Den| 11000|
+|    Matthew|  8000|
+|       Adam|  8200|
++-----------+------+
+only showing top 20 rows
 
 
 
