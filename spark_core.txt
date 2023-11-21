@@ -66,9 +66,6 @@ another method for changing the inferschema foer any partycular column
 
 >>> df1 = spark.read.csv("/input_data/employees.csv",header = True, inferSchema = True)
 
-
-
-
 -- # How to read the data and specifically mention any select statement
 
 >>> emp_df = df1.select("EMPLOYEE_ID","FIRST_NAME").show()
@@ -158,8 +155,9 @@ ANOTHER way to select the coloumn in spark
 only showing top 20 rows
 
 
+- same column  where we can add the new column data 
 
-
+>>> emp.withColumn("SALARY",col("SALARY") - 1000 ).select("EMPLOYEE_ID","FIRST_NAME","SALARY").show()
 
 
 
