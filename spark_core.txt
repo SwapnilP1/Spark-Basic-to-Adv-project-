@@ -220,17 +220,19 @@ only showing the top 20 rows
 
 
 
-Reading a data what kind of cleaning you apply ? 
+Reading data what kind of cleaning do you apply? 
 basic things 
 
-1 removing nulls value 
+1 removing null value 
 2 remove repeat data 
 
 
+# distinct query for data  -----  
+>>> emp.distinct().show()
 
+# drop duplicated data in the query 
 
-
-
+>>> emp.dropDuplicates().show()
 
 
 
