@@ -212,6 +212,9 @@ only showing the top 20 rows
 +-----------+------+
 only showing the top 20 rows
 
+#  filter condition and where conddtion 
+
+>>> emp.filter((col("DEPARTMENT_ID") == 50) & (col("SALARY") < 5000 )).select ("FIRST_NAME","SALARY","DEPARTMENT_ID").show()
 
 
 
