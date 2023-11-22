@@ -215,17 +215,42 @@ only showing the top 20 rows
 #  filter condition and where the condition 
 >>> emp.filter((col("DEPARTMENT_ID") == 50) & (col("SALARY") < 5000 )
 ).select ("FIRST_NAME","SALARY","DEPARTMENT_ID").show()
-Reading data what kind of cleaning do you apply? 
-basic things 
-1 removing null value 
-2 remove repeat data 
-# distinct query for data  -----  
+
 >>> emp.distinct().show()
 # drop duplicated data in the query 
 >>> emp.dropDuplicates().show()
 
-# in these filter condition we have to identify tge department id which is not equal to 50 
+# In these filter conditions we have to identify the department id which is not equal to 50 
+
 >>> emp.filter("DEPARTMENT_ID  <> 50 ").select ("FIRST_NAME","SALARY","DEPARTMENT_ID").show()
+
+
+Reading data what kind of cleaning do you apply? 
+
+# basic things 
+
+1 removing null value 
+2 remove repetitive data 
+   
+
+# drop the duplicate data 
+>>> emp.dropDuplicates(["DEPARTMENT_ID","HIRE_DATE"]).show(100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
