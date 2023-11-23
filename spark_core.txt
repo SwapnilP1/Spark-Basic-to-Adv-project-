@@ -237,7 +237,21 @@ Reading data what kind of cleaning do you apply?
 >>> emp.drop duplicates(["DEPARTMENT_ID","HIRE_DATE"]).show(100)
 
 
+# import all SQL function in the list ------
 
+ -  from pyspark.sql.functions import * 
+
+count the salary column 
+>>> emp.select(count("SALARY")).show(0)
+
+# count with alias name 
+ emp.select(count("SALARY")).alias("SALARY_COUNT").show()
+
++------------+
+|SALARY_COUNT|
++------------+
+|          50|
++------------+
 
 
 
