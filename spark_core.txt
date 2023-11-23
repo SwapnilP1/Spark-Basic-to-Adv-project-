@@ -232,9 +232,15 @@ Reading data what kind of cleaning do you apply?
 1 removing null value 
 2 remove repetitive data 
    
-
+ 
 # drop the duplicate data 
->>> emp.dropduplicates(["DEPARTMENT_ID","HIRE_DATE"]).show(100)
+>>> emp.drop duplicates(["DEPARTMENT_ID","HIRE_DATE"]).show(100)
+
+
+
+
+
+
 
 
 
