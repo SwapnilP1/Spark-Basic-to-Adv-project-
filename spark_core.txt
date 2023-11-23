@@ -253,6 +253,20 @@ count the salary column
 |          50|
 +------------+
 
+# max salary ( show) 
+
+>>> emp.select(max("SALARY").alias("MAX_SALARY")).show()
++----------+
+|MAX_SALARY|
++----------+
+|     24000|
++----------+
+
+
+
+
+
+
 
 
 
