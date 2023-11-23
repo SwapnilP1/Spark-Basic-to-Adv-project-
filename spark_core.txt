@@ -262,6 +262,16 @@ count the salary column
 |     24000|
 +----------+
 
+# average salary - average salary 
+
+>>> emp.select(avg("SALARY").alias("averagae_SALARY")).show()
++---------------+
+|averagae_SALARY|
++---------------+
+|        6182.32|
++---------------+
+
+
 
 
 
