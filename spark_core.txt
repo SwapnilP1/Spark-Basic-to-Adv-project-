@@ -236,15 +236,13 @@ Reading data what kind of cleaning do you apply?
 # drop the duplicate data 
 >>> emp.drop duplicates(["DEPARTMENT_ID","HIRE_DATE"]).show(100)
 
-
-# import all SQL function in the list ------
-
+# import all SQL functions in the list ------
  -  from pyspark.sql.functions import * 
 
 count the salary column 
 >>> emp.select(count("SALARY")).show(0)
 
-# count with alias name 
+# count with an alias name 
  emp.select(count("SALARY")).alias("SALARY_COUNT").show()
 
 +------------+
@@ -254,7 +252,6 @@ count the salary column
 +------------+
 
 # max salary ( show) 
-
 >>> emp.select(max("SALARY").alias("MAX_SALARY")).show()
 +----------+
 |MAX_SALARY|
@@ -263,7 +260,6 @@ count the salary column
 +----------+
 
 # average salary - average salary 
-
 >>> emp.select(avg("SALARY").alias("averagae_SALARY")).show()
 +---------------+
 |averagae_SALARY|
@@ -272,8 +268,11 @@ count the salary column
 +---------------+
 
 # ascending order department data 
-
 >>> emp.select("EMPLOYEE_ID","FIRST_NAME","DEPARTMENT_ID","SALARY").orderBy(col("DEPARTMENT_ID").asc()).show()
+
+
+
+
 
 
 
