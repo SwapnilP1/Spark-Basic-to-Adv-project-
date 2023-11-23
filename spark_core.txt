@@ -271,9 +271,9 @@ count the salary column
 |        6182.32|
 +---------------+
 
+# ascending order department data 
 
-
-
+>>> emp.select("EMPLOYEE_ID","FIRST_NAME","DEPARTMENT_ID","SALARY").orderBy(col("DEPARTMENT_ID").asc()).show()
 
 
 
