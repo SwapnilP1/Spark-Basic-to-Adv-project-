@@ -520,6 +520,35 @@ only showing the top 20 rows
 
 
 
+----------------------------------------------
+
+
+>>> emp.alias("emp1").join(emp.alias("emp2"),col("emp1.manager_id") == col("emp2.employee_id"),"inner").select(col("emp1.MANAGER_ID"),col("emp2.first_name"),col("emp2.last_name")).show(100)
+
+
+|MANAGER_ID|first_name|last_name|
++----------+----------+---------+
+|       201|   Michael|Hartstein|
+|       205|   Shelley|  Higgins|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       100|    Steven|     King|
+|       101|     Neena|  Kochhar|
+|       101|     Neena|  Kochhar|
+|       101|     Neena|  Kochhar|
+|       101|     Neena|  Kochhar|
+|       101|     Neena|  Kochhar|
+|       102|       Lex|  De Haan|
+|       103| Alexander|   Hunold|
+|       103| Alexander|   Hunold|
+
+
 
 
 
