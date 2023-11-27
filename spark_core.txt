@@ -487,11 +487,36 @@ emp.createOrReplaceTempView("employee")
 |        125|           50|          9|
 |        138|           50|          9|
 +-----------+-------------+-----------+
-only showing top 20 rows
+only showing the top 20 rows
 
 
+# join in dept side 
 
-
+>>> emp.join(dep,emp.DEPARTMENT_ID  == dep.DEPARTMENT_ID, "inner").select(emp.EMPLOYEE_ID,emp.DEPARTMENT_ID,dep.DEPARTMENT_NAME).show()
+-------------------------------------------
+|EMPLOYEE_ID|DEPARTMENT_ID|DEPARTMENT_NAME|
++-----------+-------------+---------------+
+|        200|           10| Administration|
+|        202|           20|      Marketing|
+|        201|           20|      Marketing|
+|        119|           30|     Purchasing|
+|        118|           30|     Purchasing|
+|        117|           30|     Purchasing|
+|        116|           30|     Purchasing|
+|        115|           30|     Purchasing|
+|        114|           30|     Purchasing|
+|        203|           40|Human Resources|
+|        140|           50|       Shipping|
+|        139|           50|       Shipping|
+|        138|           50|       Shipping|
+|        137|           50|       Shipping|
+|        136|           50|       Shipping|
+|        135|           50|       Shipping|
+|        134|           50|       Shipping|
+|        133|           50|       Shipping|
+|        132|           50|       Shipping|
+|        131|           50|       Shipping|
++-----------+-------------+---------------+
 
 
 
