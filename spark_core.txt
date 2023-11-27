@@ -549,6 +549,8 @@ only showing the top 20 rows
 |       103| Alexander|   Hunold|
 
 
+>>> emp.join(dep,(emp.DEPARTMENT_ID == dep.DEPARTMENT_ID) & (dep.DEPARTMENT_ID == 1700), "inner").select(emp.EMPLOYEE_ID,emp.DEPARTMENT_ID,dep.DEPARTMENT_NAME).show(100)
+
 
 
 
