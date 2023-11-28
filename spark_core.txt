@@ -555,15 +555,27 @@ only showing the top 20 rows
     1700),"inner").select(emp.EMPLOYEE_ID,emp.DEPARTMENT_ID,dep.DEPARTMENT_NAME).show(100)
 
 >>> from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+import
+
 
 create a table location 
 
+
+
 >>> schema = StructType([ StructField("Location_Id",IntegerType(),True), StructField("LOCATION_NAME",StringType(),True) ])
 
+location_data  = [(1700,"INDIA"), (1800,"USA")]
 >>> loc = spark.createDataFrame(data=location_data, schema=schema)
 
+# multiple join data 
+
+>>> emp.join(dep, (emp.DEPARTMENT_ID == dep.DEPARTMENT_ID) & (dep.LOCATION_ID == 1700), "inner").join (loc,dep.LOCATION_ID == loc.Location_Id,"inner").select(emp.EMPLOYEE_ID,emp.DEPARTMENT_ID, dep.DEPARTMENT_NAME, loc.LOCATION_NAME).show()
 
 
+SELECT emp.EMPLOYEE_ID, emp.DEPARTMENT_ID, dep.DEPARTMENT_NAME, loc.LOCATION_NAME
+FROM emp
+JOIN dep ON emp.DEPARTMENT_ID = dep.DEPARTMENT_ID AND dep.LOCATION_ID = 1700
+JOIN loc ON dep.LOCATION_ID = loc.Location_Id;
 
 
 
