@@ -617,6 +617,10 @@ only showing the top 20 rows
 # window function 
 
 
+>>> from pyspark.sql.window import Window
+
+>>> windowSpec = Window.partitionBy("DEPARTMENT_ID").orderBy("SALARY")
+
 
 
 
