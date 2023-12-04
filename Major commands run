@@ -1,1 +1,6 @@
-
+>>> from pyspark.sql import SparkSession
+>>> from pyspark.sql.types import StructType,StructField, StringType, IntegerType
+>>> emp = spark.read.csv("/input_data/employees.csv",header = True, inferSchema = True)
+>>> dep  = spark.read.csv("/input_data/departments.csv",header = True, inferSchema = True)
+>>> from pyspark.sql.functions import col
+>>> from pyspark.sql.functions import Window
