@@ -678,6 +678,14 @@ only showing the top 20 rows
 +-------------+------+-----+
 
 
+>>> emp.withColumn("SUM",  F.sum("SALARY").over(windowSpec)).select("DEPARTMENT_ID","SALARY","SUM").show(100)
+>>> windowSpec = Window.partitionBy("DEPARTMENT_ID")
+>>> emp.withColumn("SUM",  F.sum("SALARY").over(windowSpec)).select("DEPARTMENT_ID","SALARY","SUM").show(100)
+
+
+
+
+
 
 
 
