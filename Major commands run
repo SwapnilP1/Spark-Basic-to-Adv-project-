@@ -4,3 +4,5 @@
 >>> dep  = spark.read.csv("/input_data/departments.csv",header = True, inferSchema = True)
 >>> from pyspark.sql.functions import col
 >>> from pyspark.sql.functions import Window
+>>> from pyspark.sql.functions import col
+
