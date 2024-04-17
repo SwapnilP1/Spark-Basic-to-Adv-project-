@@ -1,1 +1,22 @@
+Azure Basic Concepts 
+
+Azure is a microsoft cloud computing platfrom offereing a wide
+range of servcies to help individuals and organisation build , 
+deploy and manage application and services through microsoft - managed data centers 
+
+Azure Components are - : 
+
+1) Azure Resources Manager (ADR)
+2) Azure Subscription 
+3) Azure Region 
+4) Azure Services 
+5) Azure CLI and Azure Portal 
+
+1) Azure Resources Manager (ADR) - : Azure Resources manager is a managemnt framework that allows you to deploy , manage and organize Azure Resources 
+
+
+
+
+
+
 
