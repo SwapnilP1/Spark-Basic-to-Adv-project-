@@ -79,7 +79,61 @@ such as vision, speech, language, and decision-making capabilities.
 
 Understand how to connect, monitor, and manage IoT
 devices at scale with Azure's managed IoT service.
+-------------------------------------------------------------------------------------------------------------------
 
+
+Tools for data architeure in azure mostly used 
+
+1) Azure Synapse Analytics: 
+
+Azure Synapse Analytics is a cloud-based analytics service that brings together
+big data and data warehousing capabilities. It allows you to ingest, prepare, manage, 
+and serve data for business intelligence and machine learning applications.
+
+Business Use Case: Suppose you work for a retail company that collects massive amounts of 
+sales data from various sources. You can use Azure Synapse Analytics to consolidate this data,
+perform advanced analytics, and gain insights into customer behavior, sales trends, and inventory management.
+
+
+2) Azure Data Factory:Explanation: Azure Data Factory is a cloud-based data integration service that
+allows you to create, schedule, and orchestrate data workflows. It enables you to collect
+data from multiple sources, transform it, and load it into data stores for analysis and reporting.
+
+ Imagine you work for a healthcare organization that needs to integrate data from electronic
+health records (EHR) systems, medical devices, and patient portals. Azure Data Factory
+can help you streamline this process, ensuring that healthcare providers
+have access to accurate and up-to-date patient information for better decision-making and patient care.
+
+3) Azure Databricks:
+
+Explanation: Azure Databricks is a fast, easy, and collaborative 
+Apache Spark-based analytics platform.It provides tools for data engineering, data science, and machine learning, 
+allowing teams to collaborate on big data projects.
+
+Let's say you work for a financial services firm that needs to analyze large volumes of financial data
+in real-time to detect fraudulent activities. Azure Databricks can help you build and deploy 
+machine learning models that identify suspicious transactions and prevent financial fraud.
+
+4) Azure HDInsight:  
+
+Azure HDInsight is a fully managed cloud service that provides Apache Hadoop, Spark, HBase,
+and other open-source analytics frameworks. It allows you to process big data workloads using 
+familiar open-source tools and languages.
+
+Consider a telecommunications company that wants to analyze call detail records (CDRs) to optimize network performance 
+and identify potential issues. Azure HDInsight can help you analyze these large datasets using Apache Hadoop or Spark,
+allowing you to identify patterns, trends, and anomalies in network traffic.
+
+
+5) Azure Stream Analytics:
+
+ Azure Stream Analytics is a real-time analytics service that enables you to process and analyze streaming data 
+from IoT devices, sensors, social media, and other sources. It provides low-latency processing and actionable insights 
+in real-time.
+
+Business Use Case: Suppose you work for an energy utility company that needs to monitor and optimize energy production 
+and distribution in real-time. Azure Stream Analytics can analyze streaming data from smart meters, sensors, and weather 
+forecasts to predict demand, detect anomalies, and adjust energy production accordingly.
 
 
 
