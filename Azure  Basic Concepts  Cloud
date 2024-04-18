@@ -12,7 +12,75 @@ Azure Components are - :
 4) Azure Services 
 5) Azure CLI and Azure Portal 
 
-1) Azure Resources Manager (ADR) - : Azure Resources manager is a managemnt framework that allows you to deploy , manage and organize Azure Resources 
+1) Azure Resources Manager (ADR) - :  
+
+This is like the control center for managing everything you do in Azure.
+It helps you organize and keep track of your various Azure services,
+like grouping them together so they're easier to handle.
+
+2) Azure Subscription :- 
+
+Think of this as your personal account for using Azure services.
+Just like a subscription to a magazine lets you receive new issues regularly, 
+an Azure subscription lets you use and pay for Azure cloud services.
+
+3) Azure Region: :
+
+This is the physical location around the world where Microsoft's 
+big data centers are located.When you use Azure services, you can choose which region
+hosts your data and applications to reduce delay and meet legal requirements.
+
+4) Azure Services :- 
+
+Azure offers a wide range of services that you can use to build and
+run applications in the cloud. This includes services to create virtual computers (to run applications), 
+store data, handle databases, and even specific tools for things like artificial intelligence 
+or setting up websites.
+
+5) Azure CLI and Azure Portal: 
+
+These are two ways you can interact with Azure:
+Azure CLI is a tool for the more tech-savvy users who prefer typing commands to manage Azure services.
+Azure Portal is a website where you can click through options to manage Azure services. It's user-friendly,
+especially if you prefer a graphical interface over typing commands.
+
+1) Azure Virtual Machines (VMs):
+
+Learn how to create and manage virtual machines in the Azure cloud.
+VMs are like computers in the cloud that you can use to run your applications and services.
+
+2) Azure Blob Storage:
+
+Explore Azure's object storage solution for storing large amounts of unstructured data,
+such as documents, images, videos, and backups.
+
+3) Azure App Service:
+Discover how to build, deploy, and scale web applications and
+APIs using Azure's platform-as-a-service (PaaS)offering for web apps.
+
+
+4) Azure SQL Database: 
+
+Learn about Azure's fully managed relational database service, which allows you to build, manage, and scale SQL databases 
+in the cloud without worrying about infrastructure management.
+
+5) Azure Functions: 
+
+Dive into serverless computing with Azure Functions,
+which enables you to run small pieces of code (functions)
+in response to events without managing infrastructure.
+
+6) Azure Cognitive Services: 
+
+Explore pre-built AI models and APIs for adding intelligent capabilities to your applications,
+such as vision, speech, language, and decision-making capabilities.
+
+7) Azure IoT Hub: 
+
+Understand how to connect, monitor, and manage IoT
+devices at scale with Azure's managed IoT service.
+
+
 
 
 
